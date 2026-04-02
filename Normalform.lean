@@ -2,12 +2,11 @@ import PropLogicDSL.Prop
 
 namespace PropLogicDSL
 
--- Eliminate ↔ and →, push ¬ inward to atoms (NNF)
 def Formula.toNNF : Formula → Formula
   | .var x    => .var x
   | .top      => .top
   | .bot      => .bot
-  -- push negation inward
+
   | .neg .top        => .bot
   | .neg .bot        => .top
   | .neg (.var x)    => .neg (.var x)
@@ -17,7 +16,7 @@ def Formula.toNNF : Formula → Formula
   | .neg (.impl φ ψ) => .conj φ.toNNF ψ.neg.toNNF       -- ¬(φ→ψ) ≡ φ∧¬ψ
   | .neg (.bimpl φ ψ) =>
       .disj (.conj φ.toNNF ψ.neg.toNNF) (.conj φ.neg.toNNF ψ.toNNF)
-  -- eliminate →  and ↔
+  -- eliminate ->  and <->
   | .impl φ ψ  => .disj φ.neg.toNNF ψ.toNNF
   | .bimpl φ ψ =>
       .disj (.conj φ.toNNF ψ.toNNF) (.conj φ.neg.toNNF ψ.neg.toNNF)
