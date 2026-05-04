@@ -30,5 +30,5 @@ def main : IO Unit := do
     IO.println s!"{name:<35} {φ.toString:<30} {tau}  ({sat})"
 
   IO.println ""
-  IO.println "Depth of modus ponens formula: {mp.depth}"
-  IO.println "Variables in distributivity:   {dist.vars}"
+  IO.println s!"Depth of modus ponens formula: {mp.depth}"
+  IO.println s!"Variables in distributivity:   {dist.vars}"
