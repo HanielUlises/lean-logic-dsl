@@ -1,0 +1,23 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs": "5c93235cda69fdae",
+ "log":
+ [{"message":
+   ".> /home/haniel/.elan/toolchains/leanprover--lean4---v4.29.1/bin/clang -o /home/haniel/Projects/lean-logic-dsl/.lake/build/bin/prop-logic-dsl /home/haniel/Projects/lean-logic-dsl/.lake/build/ir/Main.c.o.export /home/haniel/Projects/lean-logic-dsl/.lake/build/ir/PropLogicDSL/Prop.c.o.export /home/haniel/Projects/lean-logic-dsl/.lake/build/ir/PropLogicDSL/Semantics.c.o.export /home/haniel/Projects/lean-logic-dsl/.lake/build/ir/PropLogicDSL/PrettyPrint.c.o.export -L /home/haniel/.elan/toolchains/leanprover--lean4---v4.29.1/lib/lean --sysroot /home/haniel/.elan/toolchains/leanprover--lean4---v4.29.1 -L /home/haniel/.elan/toolchains/leanprover--lean4---v4.29.1/lib -L /home/haniel/.elan/toolchains/leanprover--lean4---v4.29.1/lib/glibc -lc -lc_nonshared -Wl,--as-needed -l:ld.so -Wl,--no-as-needed -lpthread_nonshared -Wl,--as-needed -Wl,-Bstatic -lgmp -lunwind -luv -Wl,-Bdynamic -Wl,--no-as-needed -fuse-ld=lld -Wl,--start-group -lleancpp -lLean -Wl,--end-group -lStd -Wl,--start-group -lInit -lleanrt -Wl,--end-group -Wl,-Bstatic -lc++ -lc++abi -Wl,-Bdynamic -lLake -Wl,--as-needed -lgmp -luv -lpthread -ldl -lrt -Wl,--no-as-needed -Wl,--gc-sections -lm -ldl -pthread",
+   "level": "trace"}],
+ "inputs":
+ [["linkObjs",
+   [["/home/haniel/Projects/lean-logic-dsl/.lake/build/ir/Main.c.o.export",
+     "a53301186fd8a043"],
+    ["/home/haniel/Projects/lean-logic-dsl/.lake/build/ir/PropLogicDSL/Prop.c.o.export",
+     "0d874b69def7377b"],
+    ["/home/haniel/Projects/lean-logic-dsl/.lake/build/ir/PropLogicDSL/Semantics.c.o.export",
+     "5dc8db42af2bae7f"],
+    ["/home/haniel/Projects/lean-logic-dsl/.lake/build/ir/PropLogicDSL/PrettyPrint.c.o.export",
+     "b0f633124ed30734"]]],
+  ["linkLibs", "00000000000006bb"],
+  ["Lean 4.29.1, commit f72c35b3f637c8c6571d353742168ab66cc22c00",
+   "fa77a35a41db35c0"],
+  ["traceArgs: #[]", "00000000000006bb"],
+  ["x86_64-unknown-linux-gnu", "53a0e8937c307c28"]],
+ "depHash": "d85e09a90d0d0b3f"}

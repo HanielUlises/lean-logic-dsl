@@ -1,0 +1,18 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs": "0d874b69def7377b.o",
+ "log":
+ [{"message":
+   ".> /home/haniel/.elan/toolchains/leanprover--lean4---v4.29.1/bin/clang -c -o /home/haniel/Projects/lean-logic-dsl/.lake/build/ir/PropLogicDSL/Prop.c.o.export /home/haniel/Projects/lean-logic-dsl/.lake/build/ir/PropLogicDSL/Prop.c -I /home/haniel/.elan/toolchains/leanprover--lean4---v4.29.1/include -fstack-clash-protection -fdata-sections -ffunction-sections -fPIC -fvisibility=hidden -Wno-unused-command-line-argument --sysroot /home/haniel/.elan/toolchains/leanprover--lean4---v4.29.1 -nostdinc -isystem /home/haniel/.elan/toolchains/leanprover--lean4---v4.29.1/include/clang -O3 -DNDEBUG -DLEAN_EXPORTING",
+   "level": "trace"}],
+ "inputs":
+ [["PropLogicDSL.Prop:c",
+   [["/home/haniel/Projects/lean-logic-dsl/.lake/build/ir/PropLogicDSL/Prop.c",
+     "24717bf4505ea3a5"],
+    ["Lean 4.29.1, commit f72c35b3f637c8c6571d353742168ab66cc22c00",
+     "fa77a35a41db35c0"]]],
+  ["Lean 4.29.1, commit f72c35b3f637c8c6571d353742168ab66cc22c00",
+   "fa77a35a41db35c0"],
+  ["traceArgs: #[-O3, -DNDEBUG, -DLEAN_EXPORTING]", "c1efb66122fb2b9a"],
+  ["x86_64-unknown-linux-gnu", "53a0e8937c307c28"]],
+ "depHash": "a1b12f8b8aa55da8"}

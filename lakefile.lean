@@ -2,7 +2,6 @@ import Lake
 open Lake DSL
 
 package «prop-logic-dsl» where
-  name := "PropLogicDSL"
 
 lean_lib «PropLogicDSL» where
 

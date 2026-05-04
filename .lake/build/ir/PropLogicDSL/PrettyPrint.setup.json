@@ -1,0 +1,9 @@
+{"plugins": [],
+ "package": "prop-logic-dsl",
+ "options": {},
+ "name": "PropLogicDSL.PrettyPrint",
+ "isModule": false,
+ "importArts":
+ {"PropLogicDSL.Prop":
+  ["/home/haniel/Projects/lean-logic-dsl/.lake/build/lib/lean/PropLogicDSL/Prop.olean"]},
+ "dynlibs": []}

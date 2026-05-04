@@ -24,9 +24,8 @@ def withAllValuations (φ : Formula) (f : Valuation → Bool) : List Bool :=
   let n    := vars.length
   List.range (2 ^ n) |>.map fun mask =>
     let v : Valuation := fun x =>
-      match vars.indexOf? x with
-      | some i => (mask >>> i) % 2 == 1
-      | none   => false
+      let i := vars.findIdx (· == x)
+      if i < n then (mask >>> i) % 2 == 1 else false
     f v
 
 def tautology  (φ : Formula) : Bool := (withAllValuations φ (eval · φ)).all id
@@ -44,19 +43,26 @@ theorem eval_impl (v : Valuation) (φ ψ : Formula) : eval v (φ →ₚ ψ) = (!
 theorem eval_agree (φ : Formula) (v w : Valuation)
     (h : ∀ x ∈ φ.vars, v x = w x) : eval v φ = eval w φ := by
   induction φ with
-  | var x      => exact h x (List.mem_singleton.mpr rfl)
-  | top | bot  => rfl
-  | neg φ ih   =>
-    simp [eval, ih (fun x hx => h x (by simp [Formula.vars] at *; exact hx))]
-  | conj φ ψ ihφ ihψ | disj φ ψ ihφ ihψ | impl φ ψ ihφ ihψ | bimpl φ ψ ihφ ihψ =>
-    simp [eval, Formula.vars] at *
-    constructor
-    · apply ihφ; intro x hx; exact h x (by simp [Formula.vars]; left; exact hx)
-    · apply ihψ; intro x hx; exact h x (by simp [Formula.vars]; right; exact hx)
+  | var x     => exact h x (List.mem_singleton.mpr rfl)
+  | top | bot => rfl
+  | neg φ ih  =>
+    simp only [eval]
+    congr 1
+    exact ih (fun x hx => h x (by simp [Formula.vars] at *; exact hx))
+  | conj φ ψ ihφ ihψ | disj φ ψ ihφ ihψ | bimpl φ ψ ihφ ihψ =>
+    simp only [eval, Formula.vars, List.mem_eraseDups, List.mem_append] at *
+    congr 1
+    · exact ihφ (fun x hx => h x (Or.inl hx))
+    · exact ihψ (fun x hx => h x (Or.inr hx))
+  | impl φ ψ ihφ ihψ =>
+    simp only [eval, Formula.vars, List.mem_eraseDups, List.mem_append] at *
+    have hφ : eval v φ = eval w φ := ihφ (fun x hx => h x (Or.inl hx))
+    have hψ : eval v ψ = eval w ψ := ihψ (fun x hx => h x (Or.inr hx))
+    simp [hφ, hψ]
 
 -- Decision procedure is sound w.r.t. the semantic notion
 theorem tautology_sound (φ : Formula) (htau : tautology φ = true) (v : Valuation) : v ⊨ φ := by
   simp [tautology, withAllValuations, satisfies] at *
-  sorry -- requires showing v is representable by some mask;
+  sorry -- requires showing v is representable by some mask
 
 end PropLogicDSL

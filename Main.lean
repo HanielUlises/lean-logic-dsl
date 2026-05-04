@@ -4,6 +4,9 @@ import PropLogicDSL.PrettyPrint
 
 open PropLogicDSL
 
+def padRight (s : String) (n : Nat) : String :=
+  s ++ String.mk (List.replicate (n - s.length) ' ')
+
 def main : IO Unit := do
   let p := Formula.var "p"
   let q := Formula.var "q"
@@ -21,13 +24,13 @@ def main : IO Unit := do
   ]
 
   IO.println "PropLogicDSL — formula evaluation demo\n"
-  IO.println s!"{"Name":<35} {"Formula":<30} {"Tautology?"}"
+  IO.println "Name                                Formula                        Tautology?"
   IO.println (String.mk (List.replicate 80 '-'))
 
   for (name, φ) in examples do
     let tau := if tautology φ then "yes" else "no"
     let sat := if satisfiable φ then "sat" else "unsat"
-    IO.println s!"{name:<35} {φ.toString:<30} {tau}  ({sat})"
+    IO.println s!"{padRight name 35}{padRight φ.toString 30}{tau}  ({sat})"
 
   IO.println ""
   IO.println s!"Depth of modus ponens formula: {mp.depth}"
