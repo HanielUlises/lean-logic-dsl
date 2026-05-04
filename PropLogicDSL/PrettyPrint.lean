@@ -27,7 +27,6 @@ def Formula.toString (φ : Formula) : String := φ.toStringPrec 0
 instance : ToString Formula where
   toString := Formula.toString
 
--- Precedence-aware LaTeX renderer (mirrors toStringPrec to avoid ambiguity)
 def Formula.toLatexPrec (prec : Nat) : Formula → String
   | .var x    => x
   | .top      => "\\top"

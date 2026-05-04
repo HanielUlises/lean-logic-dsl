@@ -1,9 +1,9 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["4fb638a3256d7497.olean"],
-  "i": "8fdce03a37e5da11.ilean",
-  "c": "06845262a8765257.c"},
+ {"o": ["1bf4cf39f27d9770.olean"],
+  "i": "7dddc7ff485e3a2b.ilean",
+  "c": "da1133930b8fb764.c"},
  "log":
  [{"message":
    ".> LEAN_PATH=/home/haniel/Projects/lean-logic-dsl/.lake/build/lib/lean /home/haniel/.elan/toolchains/leanprover--lean4---v4.29.1/bin/lean /home/haniel/Projects/lean-logic-dsl/Main.lean -o /home/haniel/Projects/lean-logic-dsl/.lake/build/lib/lean/Main.olean -i /home/haniel/Projects/lean-logic-dsl/.lake/build/lib/lean/Main.ilean -c /home/haniel/Projects/lean-logic-dsl/.lake/build/ir/Main.c --setup /home/haniel/Projects/lean-logic-dsl/.lake/build/ir/Main.setup.json --json",
@@ -12,7 +12,7 @@
    "Main.lean:8:7: `String.mk` has been deprecated: Use `String.ofList` instead",
    "level": "warning"},
   {"message":
-   "Main.lean:28:14: `String.mk` has been deprecated: Use `String.ofList` instead",
+   "Main.lean:29:14: `String.mk` has been deprecated: Use `String.ofList` instead",
    "level": "warning"}],
  "inputs":
  [["Main:deps",
@@ -27,7 +27,7 @@
         ["PropLogicDSL.Semantics:importAllArts", "2e8f1e67a517dabb"],
         ["PropLogicDSL.PrettyPrint transitive imports (legacy)",
          "d2f759b66c8ca1c4"],
-        ["PropLogicDSL.PrettyPrint:importAllArts", "b830055f38ba33b5"]]]]],
+        ["PropLogicDSL.PrettyPrint:importAllArts", "568d758b489f5bec"]]]]],
     ["libs",
      [["import dynlibs", "00000000000006bb"],
       ["package external libraries", "00000000000006bb"],
@@ -35,10 +35,10 @@
       ["module plugins", "00000000000006bb"]]]]],
   ["Lean 4.29.1, commit f72c35b3f637c8c6571d353742168ab66cc22c00",
    "fa77a35a41db35c0"],
-  ["/home/haniel/Projects/lean-logic-dsl/Main.lean", "48853ab714f8053c"],
+  ["/home/haniel/Projects/lean-logic-dsl/Main.lean", "0193b6849fd418a4"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: Main", "f2a1fd945cf30c62"],
   ["Package.id?: (some prop-logic-dsl)", "5fcc651b5d57612f"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "b5cb5c64f97bc82f"}
+ "depHash": "226a1872e863ddf3"}

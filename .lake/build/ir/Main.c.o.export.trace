@@ -1,6 +1,6 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
- "outputs": "a53301186fd8a043.o",
+ "outputs": "f96131b3a4da10d6.o",
  "log":
  [{"message":
    ".> /home/haniel/.elan/toolchains/leanprover--lean4---v4.29.1/bin/clang -c -o /home/haniel/Projects/lean-logic-dsl/.lake/build/ir/Main.c.o.export /home/haniel/Projects/lean-logic-dsl/.lake/build/ir/Main.c -I /home/haniel/.elan/toolchains/leanprover--lean4---v4.29.1/include -fstack-clash-protection -fdata-sections -ffunction-sections -fPIC -fvisibility=hidden -Wno-unused-command-line-argument --sysroot /home/haniel/.elan/toolchains/leanprover--lean4---v4.29.1 -nostdinc -isystem /home/haniel/.elan/toolchains/leanprover--lean4---v4.29.1/include/clang -O3 -DNDEBUG -DLEAN_EXPORTING",
@@ -8,11 +8,11 @@
  "inputs":
  [["Main:c",
    [["/home/haniel/Projects/lean-logic-dsl/.lake/build/ir/Main.c",
-     "06845262a8765257"],
+     "da1133930b8fb764"],
     ["Lean 4.29.1, commit f72c35b3f637c8c6571d353742168ab66cc22c00",
      "fa77a35a41db35c0"]]],
   ["Lean 4.29.1, commit f72c35b3f637c8c6571d353742168ab66cc22c00",
    "fa77a35a41db35c0"],
   ["traceArgs: #[-O3, -DNDEBUG, -DLEAN_EXPORTING]", "c1efb66122fb2b9a"],
   ["x86_64-unknown-linux-gnu", "53a0e8937c307c28"]],
- "depHash": "6e584baa91e79431"}
+ "depHash": "a4677c93ae3c7b51"}

@@ -1,8 +1,8 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["41dd0fb4d81d5269.olean"],
-  "i": "14d0ca5779d1e880.ilean",
+ {"o": ["8698a364a97589e8.olean"],
+  "i": "39f890aed98722f1.ilean",
   "c": "cacdecdb27536b33.c"},
  "log":
  [{"message":
@@ -24,10 +24,10 @@
   ["Lean 4.29.1, commit f72c35b3f637c8c6571d353742168ab66cc22c00",
    "fa77a35a41db35c0"],
   ["/home/haniel/Projects/lean-logic-dsl/PropLogicDSL/PrettyPrint.lean",
-   "2f860833d00ac046"],
+   "0e6448823f7af692"],
   ["options", "00000000000006bb"],
   ["isModule: false", "feefd2a0d3a1847e"],
   ["Module.name: PropLogicDSL.PrettyPrint", "dee9d020a290c9f2"],
   ["Package.id?: (some prop-logic-dsl)", "5fcc651b5d57612f"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "ced1ba9b458a0f29"}
+ "depHash": "9828ad548cd2086c"}

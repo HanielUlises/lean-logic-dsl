@@ -15,12 +15,13 @@ def main : IO Unit := do
   let lem  := p ∨ₚ ¬ₚ p
   let mp   := (p ∧ₚ (p →ₚ q)) →ₚ q
   let dist := (p →ₚ (q →ₚ ¬ₚ q)) →ₚ (p →ₚ ¬ₚ q)
-
+  let dn := (¬ₚ¬ₚp →ₚ p)
   let examples := [
     ("Law of non-contradiction",  lnc),
     ("Law of excluded middle",    lem),
     ("Modus ponens",              mp),
     ("Distributivity instance",   dist),
+    ("Double negation", dn)
   ]
 
   IO.println "PropLogicDSL — formula evaluation demo\n"
