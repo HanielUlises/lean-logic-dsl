@@ -25,7 +25,7 @@ def main : IO Unit := do
   IO.println (String.mk (List.replicate 80 '-'))
 
   for (name, φ) in examples do
-    let tau := if tautology φ then "✓ yes" else "✗ no"
+    let tau := if tautology φ then "yes" else "no"
     let sat := if satisfiable φ then "sat" else "unsat"
     IO.println s!"{name:<35} {φ.toString:<30} {tau}  ({sat})"
 
